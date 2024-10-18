@@ -1,3 +1,8 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
 header {
     display: flex;
     align-items: center;
@@ -67,4 +72,70 @@ footer{
     height: 200px;
     color: white;
     background-position: bottom;
+}
+
+#miModal {
+    background-color: lightseagreen;
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    top: 100px;
+    margin-right: auto;
+    margin-left: auto;
+    left: 0;
+    right: 0;
+    padding: 60px;
+    padding-top: 20px;
+}
+
+#modalCerrar {
+    position: absolute;
+    right: 30px;
+    cursor: pointer;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+#titulo {
+
+}
+
+#parrafo{
+
+}
+
+#miCajaForm {
+    display: flex;
+    flex-direction: column;
+
+    gap:7px;
+}
+
+#miCajaForm label {
+ font-family: Arial, Helvetica, sans-serif;
+}
+
+#miCajaForm input {
+ margin-bottom: 10px;
+}
+
+#modalLabelCheck {
+    display: flex;
+    align-items: center;
+}
+
+
+.foto1, .foto2 {
+width: 50%;
+height: 100vh;
+}
+
+video {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.contenido {
+    width: 50%;
 }
