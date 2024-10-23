@@ -1,43 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+@font-face {
+    font-family: "Everett-regular";
+    src: url(assets/Everett-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Everett-medium";
+    src: url(assets/Everett-Medium.otf);
+}
+
 body {
     margin: 0;
     padding: 0;
+    background: linear-gradient(220deg, #fdfbf8, #f3a67a);
+    background-size: 600% 600%;
+    overflow-x: hidden;
+    animation: AnimationBody 6s ease infinite;
 }
 
-header {
+@keyframes AnimationBody {
+    0% {
+        background-position: 0% 33%
+    }
+
+    50% {
+        background-position: 100% 68%
+    }
+
+    100% {
+        background-position: 0% 33%
+    }
+}
+
+#containerNav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 0 80px;
+    margin: 20px;
+    padding: 0px 30px;
+    background-color: #808F12;
+    border-radius: 50px;
+}
+
+header h1 {
+    font-family: "Averia Serif Libre", serif;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 32pt;
+    line-height: 9pt;
+    color: #FAEDD9;
+    cursor: pointer;
 }
 
 nav {
     display: flex;
     gap: 40px;
+    justify-items: center;
+    font-size: 18pt;
 }
 
-#islas{
+#contact {
+    font-family: "Everett-regular";
+    text-transform: uppercase;
+    line-height: 1.6;
+    color: #FAEDD9;
+    cursor: pointer;
+}
+
+#contact:hover {
+    color: #2A5C0B;
+    font-family: "Everett-medium";
+}
+
+
+#donar {
+    font-family: "Everett-regular";
+    font-size: 18pt;
+    text-transform: uppercase;
+    width: 120px;
+    height: 38px;
+    border: none;
+    border-radius: 44px;
+    color: #FAEDD9;
+    background-color: #EA2A15;
+    cursor: pointer;
+}
+
+#donar:hover {
+    filter: drop-shadow(10px 5px 0 #FFFBF0);
+    transform: translate(-5px, -5px);
+    transition-duration: 0.03s;
+    transition-timing-function: ease-in-out;
+}
+
+h3 {
+    font-family: "Everett-regular";
+    font-size: 21pt;
+    color: #2A5C0B;
+    font-weight: 200;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#islas {
     scale: 0.7;
     margin: 0 auto;
-    translate: 5%;
     position: relative;
+    margin-bottom: 80px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
 }
 
-#flores{
+#islas path {
+    fill: #2A5C0B;
+}
+
+.hoverin {
+    filter: drop-shadow(20px 10px 0 #EA2A15);
+    transform: translate(-10px, -10px);
+    transition-duration: 0.1s;
+    transition-timing-function: ease-in-out;
+}
+
+#flores {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    margin-bottom: 150px;
 }
 
-.cajaflora{
- width: 200px;
- background-size: cover;
-}
-
-
-.cajaflora img{
+.cajaflora {
     width: 150px;
-    
+    background-size: cover;
+    display: flex;
+
+    justify-content: center;
+
+    background-color: white;
+    height: 150px;
+    border-radius: 200px;
+    cursor: pointer;
+
 }
+
+.cajaflora p {
+    position: absolute;
+    transform: translate(0px, 140px);
+    font-family: "Averia Serif Libre", serif;
+    font-weight: 500;
+    font-size: 18pt;
+    color: #EA2A15;
+}
+
+.cajaflora img {
+    width: 80px;
+    object-fit: contain;
+}
+
+
+#flores:hover .cajaflora:not(:hover) {
+    opacity: 0.6;
+}
+
+#topButton {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: #EA2A15;
+    color: #FAEDD9;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+}
+
 
 .ficha-izq {
     display: flex;
@@ -48,12 +191,66 @@ nav {
     flex-direction: row-reverse;
 }
 
+.lineaDecorder {
+    position: absolute;
+    width: 1800px;
+    translate: 0 80px;
+    left: 20px;
+    background-color: #FAEDD9;
+    height: 80px;
+    opacity: 1;
+    border-radius: 50px;
+}
+
+.lineaDecorizq {
+    position: absolute;
+    width: 1800px;
+    translate: 0 80px;
+    right: 20px;
+    background-color: #FAEDD9;
+    height: 80px;
+    opacity: 1;
+    border-radius: 50px;
+}
+
+.contenido {
+    font-family: "Everett-regular";
+    font-size: 18pt;
+    color: #2A5C0B;
+    width: 50%;
+}
+
+h5 {
+    margin-bottom: -20px;
+    font-size: 15pt;
+}
+
+.contenidoDentro {
+    max-width: 500px;
+    padding-left: 40px;
+}
+
 .titulo {
     display: flex;
+    align-content: center;
+    padding-top: 60px;
+
+}
+
+.titulo h2 {
+    font-family: "Averia Serif Libre", serif;
+    font-weight: 800;
+    font-size: 32pt;
+    color: #EA2A15;
+    margin-right: 20px;
+    z-index: 1;
+
 }
 
 .iluPeq {
-    width:80px
+    width: 80px;
+    object-fit: contain;
+    transform: rotate(15deg);
 }
 
 .foto {
@@ -61,23 +258,12 @@ nav {
     height: 100vh;
     background-color: blueviolet;
 }
-#islas path{
-    fill:aquamarine;
-}
 
-
-footer{
-    background-image: url("./assets/paisaje.png");
-    background-repeat: no-repeat;
-    height: 200px;
-    color: white;
-    background-position: bottom;
-}
 
 #miModal {
-    background-color: lightseagreen;
+    background-color: #808F12;
     width: 500px;
-    height: 500px;
+    height: 570px;
     position: absolute;
     top: 100px;
     margin-right: auto;
@@ -86,56 +272,273 @@ footer{
     right: 0;
     padding: 60px;
     padding-top: 20px;
+    font-family: "Everett-regular";
+    color: #FAEDD9;
+    border-radius: 30px;
+}
+
+#miModalBack {
+
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(4px);
+
 }
 
 #modalCerrar {
     position: absolute;
     right: 30px;
     cursor: pointer;
+    color: #FAEDD9;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-
-#titulo {
-
-}
-
-#parrafo{
-
 }
 
 #miCajaForm {
     display: flex;
     flex-direction: column;
 
-    gap:7px;
+    gap: 7px;
 }
 
-#miCajaForm label {
- font-family: Arial, Helvetica, sans-serif;
-}
+#miCajaForm label {}
 
 #miCajaForm input {
- margin-bottom: 10px;
+    margin-bottom: 10px;
+    border: none;
+    height: 30px;
+    background-color: #FFFBF0;
+}
+
+#modalDivCheck {
+    display: block;
+}
+
+#modalinputCheck {
+    padding: 0;
+    height: initial;
+    width: initial;
+    margin-bottom: 0;
+    display: none;
+    cursor: pointer;
 }
 
 #modalLabelCheck {
-    display: flex;
-    align-items: center;
+    position: relative;
+    cursor: pointer;
 }
 
+#modalLabelCheck:before {
+    content: '';
+    -webkit-appearance: none;
+    background-color: #FAEDD9;
+    border: none;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+    padding: 10px;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    cursor: pointer;
+    margin-right: 5px;
 
-.foto1, .foto2 {
-width: 50%;
-height: 100vh;
+}
+
+#modalinputCheck:checked+#modalLabelCheck:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 5px;
+    width: 6px;
+    height: 14px;
+    border: solid #808F12;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+
+}
+
+#miModal button {
+    font-family: "Everett-regular";
+    text-transform: uppercase;
+    font-size: 18pt;
+    width: 150px;
+    height: 38px;
+    border: none;
+    border-radius: 44px;
+    color: #FAEDD9;
+    background-color: #EA2A15;
+    cursor: pointer;
+    margin-top: 50px;
+    margin-left: 50%;
+    translate: -50%;
+}
+
+#miModal button:hover {
+    box-shadow: 10px 5px 0 #FFFBF0;
+    transform: translate(-5px, -5px);
+    transition-duration: 0.03s;
+    transition-timing-function: ease-in-out;
+}
+
+.foto1,
+.foto2 {
+    width: 50%;
+    height: 100vh;
 }
 
 video {
     object-fit: cover;
     height: 100%;
     width: 100%;
+
 }
 
 .contenido {
     width: 50%;
 }
+
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: #EA2A15;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+#scrollToTopBtn:hover {
+    background-color: #FAEDD9;
+}
+
+#scrollToTopBtn:hover path {
+    fill: #EA2A15;
+}
+
+
+
+.persona {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column-reverse;
+}
+
+.ilustracion {
+    width: 60px;
+    height: 60px;
+    background-color: #2A5C0B;
+}
+
+.patrocinadores img {
+    width: 200px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.patrocinadoresBox {
+    height: 300px;
+    width: 100%;
+    background-color: #FAEDD9;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.patrocinadores {
+    display: flex;
+    align-items: center;
+
+    gap: 100px;
+    height: 300px;
+    animation: scrolling-left1 10s linear infinite;
+
+}
+
+@keyframes scrolling-left1 {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.quienesSomos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30px;
+    height: 85vh;
+}
+
+.textQuienes {
+    font-family: "Averia Serif Libre", serif;
+    font-weight: 700;
+    font-size: 36pt;
+    color: #EA2A15;
+}
+
+.contactpics {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 0px;
+    margin-bottom: 100px;
+}
+
+.ind {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ind h3 {
+    font-family: "Averia Serif Libre", serif;
+    font-weight: 700;
+    font-size: 21pt;
+    color: #2A5C0B;
+    margin-top: -15px;
+}
+
+.pic svg {
+    width: 240px;
+    height: 300px;
+}
+
+footer {
+padding-top: 50px;
+    height: 15vh;
+    background-image:
+        linear-gradient(120deg, #808F12, transparent, #EA2A15),
+        linear-gradient(to top, #2A5C0B,#3b7e12, #f3a67a);
+    font-family: "Everett-regular";
+    font-size: 16pt;
+    color: antiquewhite;
+}
+
+#redesSociales {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.img {
+    display: flex;
+    width: 50px;
+    height: 50px;
+    flex-direction: row;
+    padding: auto;
+}
+
+#redesSociales div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+}
+
